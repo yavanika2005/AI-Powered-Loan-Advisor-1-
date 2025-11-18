@@ -1,0 +1,63 @@
+:root{
+  --accent: #6b5bff;
+  --muted: #6c757d;
+  --bg-grad: linear-gradient(135deg, rgba(107,91,255,0.08), rgba(9,132,227,0.03));
+}
+
+body{
+  background: var(--bg-grad);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.navbar{
+  background: linear-gradient(90deg, rgba(20,20,50,0.95), rgba(36,11,54,0.95));
+}
+
+.navbar .accent{
+  color: var(--accent);
+}
+
+a.nav-link{
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-img{
+  max-width: 420px;
+}
+
+.card{
+  border: none;
+  border-radius: 12px;
+}
+
+.btn-primary{
+  background: linear-gradient(90deg, #6b5bff, #5aa9ff);
+  border: none;
+  box-shadow: 0 6px 18px rgba(90,169,255,0.12);
+}
+
+.footer{
+  background: transparent;
+  color: #666;
+}
+
+/* Chat window styling */
+.chat-window .assistant-msg{
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 92%;
+}
+
+.chat-window .user-msg{
+  background: #e9f5ff;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 92%;
+}
+
+.alert-danger{
+  background: #fff0f0;
+}

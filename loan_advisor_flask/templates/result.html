@@ -1,0 +1,42 @@
+<!-- templates/result.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Result — Loan Advisor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container my-5">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3>Decision</h3>
+        <p class="lead">Prediction: <strong>{{ prediction }}</strong></p>
+        <p>Approval Confidence: <strong>{{ probability }}%</strong></p>
+
+        <h5>Applicant Summary</h5>
+        <ul>
+          <li><strong>Name:</strong> {{ applicant.name }}</li>
+          <li><strong>Age:</strong> {{ applicant.age }}</li>
+          <li><strong>Monthly Income:</strong> {{ applicant.monthly_income }}</li>
+          <li><strong>Credit Score:</strong> {{ applicant.credit_score }}</li>
+          <li><strong>Loan Amount:</strong> {{ applicant.loan_amount }}</li>
+          <li><strong>Employment Type:</strong> {{ applicant.employment_type }}</li>
+        </ul>
+
+        {% if shap_image %}
+        <h5>Model explainability</h5>
+        <img src="/reports/{{ shap_image }}" class="img-fluid" alt="SHAP explanation" style="max-width:600px;">
+        {% endif %}
+
+        <div class="mt-4">
+          <a href="/reports/{{ report_filename }}" class="btn btn-success">Download PDF Report</a>
+          <a href="/" class="btn btn-secondary">Back</a>
+          <a href="/chatbot.html" class="btn btn-outline-primary">Open Chatbot</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
