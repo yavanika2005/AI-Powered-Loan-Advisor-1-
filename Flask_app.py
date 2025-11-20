@@ -10,7 +10,7 @@ model = pickle.load(open("C:\\Users\\cheta\\Desktop\\AI - Power Loan Eligibility
 def home():
     return render_template("index.html")
 
-@app.route('/predict', methods = ["GET","POST"]) #get - typically used to show a blank prediction page or result page. #post-used to submit the form with input values that the server uses to make a prediction.
+@app.route('/predict', methods = ["GET","POST"]) # typically used to show a blank prediction page or result page. #post-used to submit the form with input values that the server uses to make a prediction.
 def predict():
     if request.method == 'POST':
         gender = request.form['gender']
